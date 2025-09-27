@@ -11,3 +11,15 @@ dlg.addEventListener('click',(e)=>{
   const inside=e.clientX>=card.left && e.clientX<=card.right && e.clientY>=card.top && e.clientY<=card.bottom;
   if(!inside) dlg.close();
 });
+
+// ====== AUDIO AUTOPLAY (no button) ======
+const bg = document.getElementById('bg-music');
+const intro = document.getElementById('intro-voice');
+if (bg) bg.volume = 0.35;
+if (intro) intro.volume = 0.9;
+window.addEventListener('DOMContentLoaded', async () => {
+  try { await Promise.all([intro?.play(), bg?.play()]); } catch (e) {}
+});
+window.addEventListener('pointerdown', () => {
+  intro?.play().catch(()=>{}); bg?.play().catch(()=>{});
+}, {once:true});
