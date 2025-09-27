@@ -1,0 +1,27 @@
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#111;background:#fff}
+.site-header{text-align:center;padding:20px 12px;border-bottom:1px solid #eee;background:#fafafa}
+.site-header h1{margin:0 0 6px;font-size:clamp(22px,5vw,34px)}
+.site-header p{margin:0;opacity:.85}
+.container{max-width:1100px;margin:18px auto;padding:0 14px}
+h2{margin:12px 0}
+.lead{opacity:.85;margin:0 0 10px}
+.stage{position:relative;width:100%;padding-bottom:56.25%;background:#f0f3f5 no-repeat center/cover;border-radius:16px;overflow:hidden;box-shadow:0 6px 30px rgba(0,0,0,.06);background-image:var(--bg)}
+.hotspot{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);background:transparent;border:0;cursor:pointer}
+.hotspot .dot{width:16px;height:16px;border-radius:50%;background:#2563eb;display:inline-block;box-shadow:0 0 0 0 rgba(37,99,235,.5);animation:pulse 1.8s infinite}
+.hotspot .dot::after{content:"";position:absolute;width:36px;height:36px;border-radius:50%;border:2px solid rgba(37,99,235,.35);left:50%;top:50%;transform:translate(-50%,-50%)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,99,235,.5)}70%{box-shadow:0 0 0 12px rgba(37,99,235,0)}100%{box-shadow:0 0 0 0 rgba(37,99,235,0)}}
+.hotspot .tooltip{position:absolute;top:-14px;left:22px;background:#111;color:#fff;font-size:12px;padding:4px 8px;border-radius:8px;opacity:0;pointer-events:none;transition:.2s;white-space:nowrap}
+.hotspot:hover .tooltip{opacity:.95;transform:translateY(-4px)}
+.buttons{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:16px 0}
+.btn{text-decoration:none;color:#111;border:1px solid #ddd;padding:10px 14px;border-radius:12px;background:#fff}
+.btn:hover{background:#f6f6f6}
+.modal{border:none;border-radius:14px;padding:0;box-shadow:0 10px 50px rgba(0,0,0,.2);width:min(560px,92vw)}
+.modal-card{padding:18px 18px 12px}
+.modal h3{margin:6px 0 8px;font-size:20px}
+.modal p{margin:0 0 14px;line-height:1.55}
+.close-btn{padding:8px 12px;border-radius:10px;border:1px solid #ddd;background:#fff;cursor:pointer}
+.close-btn:hover{background:#f6f6f6}
+.site-footer{text-align:center;padding:20px 0 32px;opacity:.7}
+.link{outline:none}
